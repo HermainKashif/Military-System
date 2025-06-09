@@ -1,0 +1,504 @@
+body {
+  margin: 0;
+  background-color: #393e46;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 12vh;
+  background-color: white;
+  width: 100%;
+  padding: 0 4vw;
+  box-sizing: border-box;
+  color: #222831;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+  margin-right: 50px;
+}
+
+.navbar-logo-text {
+  font-size: 1.6vw;
+  font-weight: 300;
+  color: #222831;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .navbar-logo img {
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .navbar-logo-text {
+    font-size: 4vw;
+  }
+}
+
+.tabs-section {
+  background-color: #dfd0b8;
+  padding: 0 13.44vw;
+  display: flex;
+  align-items: stretch;
+  height: 6.7vh;
+}
+
+.tabs {
+  display: flex;
+  gap: 2px;
+}
+
+.tab {
+  background-color: #b7aa97;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  border: none;
+  height: 6.7vh;
+  padding: 0 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 3px 3px 0 0;
+}
+
+.tab:hover:not(.active) {
+  background-color: #948979;
+}
+
+.tab.active {
+  background-color: #948979;
+  cursor: default;
+}
+
+.tab-content {
+  background-color: transparent;
+  padding: 80px 4vw;
+  box-sizing: border-box;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.section-title {
+  font-size: 1.6vw;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  border-bottom: 2px solid #dfd0b8;
+  line-height: 2px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.section-subtitle {
+  color: white;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+  margin-top: 12px;
+  margin-left: 9.44vw;
+}
+
+.section-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 0;
+}
+
+.section-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2vw 4vw;
+  box-sizing: border-box;
+  color: #222831;
+  min-height: 48vh;
+  max-height: 74vh;
+  width: 44%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 1024px) {
+  .section-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Form Grid Styling */
+.personnel-form {
+  display: grid;
+  gap: 28px;
+}
+
+.unit-section-form .personnel-form {
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-input {
+  border: 2px solid #948979;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #222831;
+  box-sizing: border-box;
+}
+
+select.form-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='7' viewBox='0 0 10 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23484848' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  padding-right: 40px; /* Extra space for arrow */
+}
+
+.id-input {
+  width: 35%;
+}
+
+.rank-select {
+  width: 60%;
+}
+
+.date-input {
+  width: 47.5%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.button-row {
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-button {
+  width: 30%;
+  border-radius: 4px;
+  padding: 10px 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.add-button {
+  background-color: #45a049;
+}
+
+.update-button {
+  background-color: #1976d2;
+}
+
+.delete-button {
+  background-color: #d32f2f;
+}
+
+.unit-section-table {
+  width: 55%;
+  padding: 1vw 0.5vw;
+}
+
+.operation-section-table {
+  padding: 2vw 0.2vw;
+}
+.table-title {
+  font-size: 1.3vw;
+  color: #393e46;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-bottom: 1.5vw;
+  margin-left: 1.5vw;
+}
+
+.table-scroll-container {
+  max-height: 48vh;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+/* Custom scrollbar styling for WebKit browsers */
+.table-scroll-container::-webkit-scrollbar {
+  width: 6px; /* thinner scrollbar */
+}
+
+.table-scroll-container::-webkit-scrollbar-track {
+  background: transparent; /* or use a light grey if needed */
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #393e46;
+  border-radius: 4px;
+}
+
+/* Firefox support */
+.table-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: #393e46 transparent;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: separate; /* important for border-spacing to work */
+  border-spacing: 0 0; /* no vertical spacing */
+  font-family: "Poppins", sans-serif;
+  font-size: 1vw;
+  color: #393e46;
+}
+
+.data-table thead th {
+  background-color: #393e46;
+  color: white;
+  font-weight: 400;
+  padding: 12px 16px;
+  text-align: left;
+  /* Remove border radius on edit column for now */
+}
+
+.data-table thead th:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.data-table thead th:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.data-table thead th.edit-heading {
+  background-color: #ff9800;
+  color: white;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Add extra spacing (gap) between second last and last columns */
+.data-table tbody td:nth-last-child(2),
+.data-table thead th:nth-last-child(2) {
+  border-right: 20px solid transparent; /* creates a visible gap \*/
+}
+
+.data-table tbody td {
+  padding: 12px 16px;
+  position: relative;
+}
+
+.data-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.edit-icon {
+  opacity: 0;
+  cursor: pointer;
+  color: #393e46;
+  transition: opacity 0.3s ease;
+}
+
+.edit-cell {
+  text-align: center;
+}
+
+.data-table tbody tr:hover .edit-icon {
+  opacity: 1;
+}
+
+.section-search-form {
+  padding: 4vw 4vw;
+}
+
+/* Align the Search button similar to Add/Update/Delete, with specific bg color */
+.search-button {
+  background-color: #1976d2;
+  width: 30%;
+  border-radius: 4px;
+  padding: 10px 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 20px; /* space from input */
+}
+
+/* Adjust form-row in Search form so that input and button align nicely */
+.search-form .form-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+/* Override full-width for keyword input in search */
+.search-form .keyword-input {
+  width: 60%;
+}
+
+/* Override form-row for first and second line to only contain one element */
+.search-form .form-row:nth-child(1),
+.search-form .form-row:nth-child(2) {
+  display: block;
+}
+
+/* Make select full width on those lines */
+.search-form select.form-input {
+  width: 100%;
+}
+
+#search .section-form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px; /* vertical gap between lines */
+  width: 100%;
+}
+
+#search .section-form .form-row {
+  display: flex;
+  gap: 20px; /* horizontal gap between controls in each row */
+  flex-wrap: wrap;
+}
+
+#search .section-form select.form-input,
+#search .section-form input.form-input {
+  border: 2px solid #948979;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #222831;
+  box-sizing: border-box;
+}
+
+#search .section-form select.form-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='7' viewBox='0 0 10 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23484848' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  padding-right: 40px;
+}
+
+/* Specific widths for controls as per design */
+
+#search .section-form .select-table {
+  width: 100%;
+}
+
+#search .section-form .select-search-field {
+  width: 35%;
+}
+
+#search .section-form .input-keyword {
+  flex: 1; /* take remaining space */
+  min-width: 200px;
+}
+
+/* Search button styling */
+
+#search .section-form .search-button {
+  width: 120px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+#search .section-form .search-button:hover {
+  background-color: #115293;
+}
+
+#search .section-report {
+  margin-top: 12px; /* space above report strip */
+  background-color: white;
+  border-radius: 20px; /* same as rest */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 2vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #222831;
+  font-size: 16px;
+  width: 100%;
+  user-select: none;
+}
+#search .section-report .report-count {
+  font-weight: 700;
+  color: #1976d2; /* accent color to highlight number */
+  min-width: 30px;
+  text-align: center;
+}
+
+.equipment-form {
+  padding: 2vw 1.5vw !important;
+  width: 38% !important;
+}
+
+.equipment-section-table {
+  width: 61%;
+}
+
+.operation-section-form {
+  padding: 2vw 1.5vw !important;
+  width: 39% !important;
+}
+
+.operation-section-table {
+  width: 60% !important;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}

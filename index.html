@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Military Operations System</title>
+    <link
+      rel="icon"
+      href="./images/logo-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="./images/logo.png" alt="Logo" />
+        <div class="navbar-logo-text">Military Operations System Portal</div>
+      </div>
+    </nav>
+    <section class="tabs-section">
+      <div class="tabs">
+        <button class="tab active" data-tab="personnel">Personnel</button>
+        <button class="tab" data-tab="units">Units</button>
+        <button class="tab" data-tab="operation">Operation</button>
+        <button class="tab" data-tab="missions">Missions</button>
+        <button class="tab" data-tab="equipment">Equipment</button>
+        <button class="tab" data-tab="search">Search</button>
+      </div>
+    </section>
+
+    <section class="tab-content">
+      <div id="personnel" class="content active">
+        <div class="section-title">Personnel Management</div>
+        <div class="section-subtitle">
+          Add, update, or remove personnel from the system.
+        </div>
+        <div class="section-wrapper">
+          <div class="section-card section-form">
+            <form class="personnel-form">
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Personnel ID"
+                  class="form-input id-input"
+                />
+                <select class="form-input rank-select">
+                  <option disabled selected>Select Rank</option>
+                  <option>Major</option>
+                  <option>Captain</option>
+                  <option>Lieutenant</option>
+                  <option>Colonel</option>
+                  <option>Brigadier</option>
+                  <option>General</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="form-input name-input full-width"
+                />
+              </div>
+
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Unit ID"
+                  class="form-input name-input unit-input full-width"
+                />
+              </div>
+
+              <div class="form-row button-row">
+                <button type="submit" class="form-button add-button">
+                  Add
+                </button>
+                <button type="submit" class="form-button update-button">
+                  Update
+                </button>
+                <button type="submit" class="form-button delete-button">
+                  Delete
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="section-card section-table">
+            <h3 class="table-title">Table</h3>
+            <div class="table-scroll-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>P. ID</th>
+                    <th>Name</th>
+                    <th>Rank</th>
+                    <th>Unit ID</th>
+                    <th class="edit-heading">Edit</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="units" class="content">
+        <div class="section-title">Unit Management</div>
+        <div class="section-subtitle">
+          Add, update, or remove units from the system.
+        </div>
+        <div class="section-wrapper">
+          <div class="section-card section-form unit-section-form">
+            <form class="personnel-form">
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Unit ID"
+                  class="form-input id-input unit-id-input"
+                />
+                <input
+                  type="text"
+                  placeholder="Unit Name"
+                  class="form-input rank-select unit-name-input"
+                />
+              </div>
+
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Country"
+                  class="form-input full-width unit-country-input"
+                />
+                <select
+                  class="form-input unit-input full-width unit-type-input"
+                >
+                  <option disabled selected>Type</option>
+                  <option>Infantry</option>
+                  <option>Artillery</option>
+                  <option>Airborne</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Officer ID"
+                  class="form-input id-input unit-officer-id-input"
+                />
+                <input
+                  type="text"
+                  placeholder="Deployment"
+                  class="form-input rank-select unit-deployment-input"
+                />
+              </div>
+
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Operation ID"
+                  class="form-input full-width unit-operation-id-input"
+                />
+              </div>
+
+              <div class="form-row button-row">
+                <button type="submit" class="form-button add-button">
+                  Add
+                </button>
+                <button type="submit" class="form-button update-button">
+                  Update
+                </button>
+                <button type="submit" class="form-button delete-button">
+                  Delete
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="section-card section-table unit-section-table">
+            <h3 class="table-title">Table</h3>
+            <div class="table-scroll-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>U. ID</th>
+                    <th>U. Name</th>
+                    <th>Country</th>
+                    <th>Type</th>
+                    <th>Officer ID</th>
+                    <th>Deployment</th>
+                    <th>Op. ID</th>
+                    <th class="edit-heading">Edit</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="operation" class="content">
+        <div class="section-title">Operation Management</div>
+        <div class="section-subtitle">
+          Add, update, or remove operations from the system.
+        </div>
+        <div class="section-wrapper">
+          <div
+            class="section-card section-form unit-section-form operation-section-form"
+          >
+            <form class="personnel-form">
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Operation ID"
+                  class="form-input id-input"
+                />
+                <input
+                  type="text"
+                  placeholder="Operation Name"
+                  class="form-input rank-select"
+                  id="op-name-id"
+                />
+              </div>
+
+              <div class="form-row">
+                <input
+                  type="text"
+                  class="form-input date-input id-input"
+                  placeholder="Start Date"
+                  onfocus="(this.type='date')"
+                  onblur="if(this.value===''){this.type='text'}"
+                />
+                <input
+                  type="text"
+                  class="form-input date-input rank-select"
+                  placeholder="End Date"
+                  onfocus="(this.type='date')"
+                  onblur="if(this.value===''){this.type='text'}"
+                />
+              </div>
+
+              <div class="form-row">
+                <select class="form-input id-input">
+                  <option disabled selected>Status</option>
+                  <option>Planned</option>
+                  <option>Ongoing</option>
+                  <option>Completed</option>
+                  <option>Cancelled</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="Objective"
+                  class="form-input rank-select"
+                />
+              </div>
+
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Coalition ID"
+                  class="form-input full-width"
+                />
+              </div>
+
+              <div class="form-row button-row">
+                <button type="submit" class="form-button add-button">
+                  Add
+                </button>
+                <button type="submit" class="form-button update-button">
+                  Update
+                </button>
+                <button type="submit" class="form-button delete-button">
+                  Delete
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div
+            class="section-card section-table unit-section-table operation-section-table"
+          >
+            <h3 class="table-title">Table</h3>
+            <div class="table-scroll-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>OP. ID</th>
+                    <th>OP. Name</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Objective</th>
+                    <th>Status</th>
+                    <th>Coalition ID</th>
+                    <th class="edit-heading">Edit</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="equipment" class="content">
+        <div class="section-title">Equipment Management</div>
+        <div class="section-subtitle">
+          Add, update, or remove equipment from the system.
+        </div>
+        <div class="section-wrapper">
+          <div class="section-card section-form equipment-form">
+            <form class="personnel-form">
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Equipment ID"
+                  class="form-input id-input"
+                />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="form-input rank-select"
+                />
+              </div>
+              <div class="form-row">
+                <select class="form-input id-input">
+                  <option disabled selected>Type</option>
+                  <option>Vehicle</option>
+                  <option>Weapon</option>
+                  <option>Aircraft</option>
+                  <option>Communication</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="Unit ID"
+                  class="form-input rank-select"
+                />
+              </div>
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Serial Number"
+                  class="form-input id-input"
+                />
+                <select class="form-input rank-select">
+                  <option disabled selected>Status</option>
+                  <option>Operational</option>
+                  <option>Damaged</option>
+                  <option>Under Repair</option>
+                  <option>Lost</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <input
+                  type="text"
+                  class="form-input full-width date-input"
+                  placeholder="Acquired Date"
+                  onfocus="(this.type='date')"
+                  onblur="if(this.value===''){this.type='text'}"
+                />
+              </div>
+              <div class="form-row button-row">
+                <button type="submit" class="form-button add-button">
+                  Add
+                </button>
+                <button type="submit" class="form-button update-button">
+                  Update
+                </button>
+                <button type="submit" class="form-button delete-button">
+                  Delete
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            class="section-card section-table unit-section-table equipment-section-table"
+          >
+            <h3 class="table-title">Table</h3>
+            <div class="table-scroll-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Eq. ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Unit ID</th>
+                    <th>Serial #</th>
+                    <th>Status</th>
+                    <th>Acquired</th>
+                    <th class="edit-heading">Edit</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="missions" class="content">
+        <div class="section-title">Mission Management</div>
+        <div class="section-subtitle">
+          Add, update, or remove missions from the system.
+        </div>
+        <div class="section-wrapper">
+          <div
+            class="section-card section-form unit-section-form missions-section-form"
+          >
+            <form class="personnel-form">
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Mission ID"
+                  class="form-input id-input"
+                  id="mission-id"
+                />
+                <input
+                  type="text"
+                  placeholder="Mission Name"
+                  class="form-input rank-select"
+                  id="mission-name"
+                />
+              </div>
+              <div class="form-row">
+                <input
+                  type="text"
+                  class="form-input date-input id-input"
+                  placeholder="Start Time"
+                  onfocus="(this.type='datetime-local')"
+                  onblur="if(this.value===''){this.type='text'}"
+                  id="mission-start"
+                />
+                <input
+                  type="text"
+                  class="form-input date-input rank-select"
+                  placeholder="End Time"
+                  onfocus="(this.type='datetime-local')"
+                  onblur="if(this.value===''){this.type='text'}"
+                  id="mission-end"
+                />
+              </div>
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Operation ID"
+                  class="form-input id-input"
+                  id="operation-id"
+                />
+                <input
+                  type="text"
+                  placeholder="Assigned Unit ID"
+                  class="form-input rank-select"
+                  id="unit-id"
+                />
+              </div>
+              <div class="form-row button-row">
+                <button type="submit" class="form-button add-button">
+                  Add
+                </button>
+                <button type="submit" class="form-button update-button">
+                  Update
+                </button>
+                <button type="submit" class="form-button delete-button">
+                  Delete
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="section-card section-table unit-section-table">
+            <h3 class="table-title">Table</h3>
+            <div class="table-scroll-container">
+              <table class="data-table" id="missions-table">
+                <thead>
+                  <tr>
+                    <th>M. ID</th>
+                    <th>M. Name</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Operation ID</th>
+                    <th>As. Unit ID</th>
+                    <th class="edit-heading">Edit</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="search" class="content">
+        <div class="section-title">Search & Reports</div>
+        <div class="section-wrapper">
+          <div class="section-card section-form section-search-form">
+            <form class="search-form">
+              <div class="form-row">
+                <select class="form-input select-table">
+                  <option disabled selected>Select Table</option>
+                  <option>Personnel</option>
+                  <option>Units</option>
+                  <option>Operation</option>
+                  <option>Missions</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <select class="form-input search-field">
+                  <option disabled selected>Select Search Field</option>
+                  <!-- dynamic options will be added here via JS -->
+                </select>
+              </div>
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Keyword e.g. Ali"
+                  class="form-input keyword-input full-width"
+                />
+                <button type="submit" class="form-button search-button">
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="section-card section-table unit-section-table">
+            <h3 class="table-title">Search Results</h3>
+            <div class="table-scroll-container">
+              <table class="data-table search-results-table">
+                <thead>
+                  <tr>
+                    <!-- Dynamic columns based on selected table -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Search results rows will appear here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="section-report">
+            <!-- <span class="report-text"><b>Report:</b> Total Records Found</span>
+            <span class="report-count">01</span> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
