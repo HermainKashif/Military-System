@@ -1,0 +1,13 @@
+Military Management System
+This is a basic database management project developed using SQL, designed to help manage key components of a military organization.
+Features:
+Add, update, view, and delete records related to:
+Purpose:
+To provide a simple and structured way to handle military data for training or educational purposes. This project demonstrates the practical use of SQL queries, relational database design, and data normalization.
+Technologies Used:
+SQL (Structured Query Language)
+HTML frontend
+Capabilities:
+CRUD operations (Create, Read, Update, Delete)
+Efficient data retrieval using queries
+Relationships between tables.
